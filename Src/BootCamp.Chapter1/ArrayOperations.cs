@@ -2,6 +2,7 @@
 {
     public static class ArrayOperations
     {
+
         /// <summary>
         /// Sort the array in ascending order.
         /// If array empty or null- don't do anything.
@@ -9,6 +10,20 @@
         /// <param name="array">Input array in a random order.</param>
         public static void Sort(int[] array)
         {
+            if (array == null || array.Length < 1) return;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = i+1; j < array.Length; j++)
+                {
+                    if (array[i] > array[j])
+                    {
+                        int newArray = array[i];
+                        array[i] = array[j];
+                        array[j] = newArray;
+                    }
+                }
+            }
             // ToDo: implement.
         }
 

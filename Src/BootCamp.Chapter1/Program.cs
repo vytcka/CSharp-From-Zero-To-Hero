@@ -1,4 +1,6 @@
-﻿namespace BootCamp.Chapter1
+﻿using System.Collections.Generic;
+
+namespace BootCamp.Chapter1
 {
     class Program
     {
