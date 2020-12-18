@@ -24,7 +24,6 @@
                     }
                 }
             }
-            // ToDo: implement.
         }
 
         /// <summary>
@@ -34,7 +33,14 @@
         /// <param name="array">Input array in a random order.</param>
         public static void Reverse(int[] array)
         {
-            // ToDo: implement.
+            if (array == null || array.Length < 1) return;
+
+            for (int i = 0; i < array.Length / 2; i++)
+            {
+                int temp = array[i];
+                array[i] = array[array.Length - i - 1];
+                array[array.Length - i - 1] = temp;
+            }
         }
 
         /// <summary>
